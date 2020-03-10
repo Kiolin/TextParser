@@ -1,0 +1,14 @@
+C:\Users\alexf\source\repos\TextParser\TextParser\bin\Debug\TextParser.exe.config
+C:\Users\alexf\source\repos\TextParser\TextParser\bin\Debug\TextParser.exe
+C:\Users\alexf\source\repos\TextParser\TextParser\bin\Debug\TextParser.pdb
+C:\Users\alexf\source\repos\TextParser\TextParser\obj\Debug\App.g.cs
+C:\Users\alexf\source\repos\TextParser\TextParser\obj\Debug\TextParser_MarkupCompile.cache
+C:\Users\alexf\source\repos\TextParser\TextParser\obj\Debug\TextParser_MarkupCompile.lref
+C:\Users\alexf\source\repos\TextParser\TextParser\obj\Debug\TextParser.g.resources
+C:\Users\alexf\source\repos\TextParser\TextParser\obj\Debug\TextParser.Properties.Resources.resources
+C:\Users\alexf\source\repos\TextParser\TextParser\obj\Debug\TextParser.csproj.GenerateResource.cache
+C:\Users\alexf\source\repos\TextParser\TextParser\obj\Debug\TextParser.exe
+C:\Users\alexf\source\repos\TextParser\TextParser\obj\Debug\TextParser.pdb
+C:\Users\alexf\source\repos\TextParser\TextParser\obj\Debug\TextParser.csprojAssemblyReference.cache
+C:\Users\alexf\source\repos\TextParser\TextParser\obj\Debug\View\MainWindow.g.cs
+C:\Users\alexf\source\repos\TextParser\TextParser\obj\Debug\View\MainWindow.baml
