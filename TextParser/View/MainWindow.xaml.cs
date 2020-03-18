@@ -26,47 +26,34 @@ namespace TextParser
             InitializeComponent();
         }
 
-        private void OpenFile_Click(object sender, RoutedEventArgs e)
+        private void ParserButton_Click(object sender, RoutedEventArgs e)
         {
-            
-            OpenFileDialog dialog = new OpenFileDialog();
-            dialog.Filter = "Text documents (*.txt)|*.txt|All files (*.*)|*.*";
-            dialog.FilterIndex = 2;
-            dialog.Multiselect = true;
-            Nullable<bool> result = dialog.ShowDialog();
-            if (result == true)
+            ParserButton.IsEnabled = false;
+            Answer.Text = "";
+            OpenFileDialog openDialog = new OpenFileDialog();
+            openDialog.Filter = "Text documents (*.txt)|*.txt|All files (*.*)|*.*";
+            openDialog.FilterIndex = 2;
+            openDialog.Multiselect = true;
+            Nullable<bool> openResult = openDialog.ShowDialog();
+            if (openResult == true)
             {
-                string[] filenames = dialog.FileNames;
+                string[] filenames = openDialog.FileNames;
                 t.Reader(filenames);
             }
-            Answer.Text = t._text.GetAnswer();
-
-        }
-
-        private void SaveFile_Click(object sender, RoutedEventArgs e)
-        {
-            for (int i = 0; i < t._text.GetWords().Count; i++)
+            Answer.Text = t.ChangeAnswer();
+            t.Parser(PunctBox.IsChecked.Value,CountWord.Text);
+            Answer.Text = t.ChangeAnswer();
+            for(int i = 0; i < t.GetFIleCount();i++)
             {
-                int temp;
-                SaveFileDialog dialog = new SaveFileDialog();
-                dialog.Filter = "Text documents (*.txt)|*.txt|All files (*.*)|*.*";
-                dialog.FilterIndex = 2;
-                Nullable<bool> result = dialog.ShowDialog();
-                try
-                {
-                    if (CountWord.Text == "")
-                        temp = 0;
-                    else
-                        temp = Convert.ToInt32(CountWord.Text);
-                    string[] filenames = dialog.FileNames;
-                    t.Writter(dialog.FileName, RadioPunct.IsChecked.Value, temp, i);
-                    Answer.Text = t._text.GetAnswer();
-                }
-                catch (Exception ex)
-                {
-                    Answer.Text = ex.Message;
-                }
+                SaveFileDialog saveDialog = new SaveFileDialog();
+                saveDialog.Filter = "Text documents (*.txt)|*.txt|All files (*.*)|*.*";
+                saveDialog.FilterIndex = 2;
+                Nullable<bool> saveResult = saveDialog.ShowDialog();
+                t.Writter(saveDialog.FileName, i);
+                Answer.Text = t.ChangeAnswer();
             }
+            Answer.Text += "Работа с файлами окончена. \r\n";
+            ParserButton.IsEnabled = true;
         }
     }
 }

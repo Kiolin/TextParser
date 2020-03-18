@@ -7,12 +7,11 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="328.4" Width="451.2">
     <Grid Margin="0,0,-0.4,0.4">
-        <Button x:Name="OpenFile" Content="Открыть файл" HorizontalAlignment="Left" Margin="98,54,0,0" VerticalAlignment="Top" Width="112" Click="OpenFile_Click"/>
-        <Button x:Name="SaveFile" Content="Записать файл" HorizontalAlignment="Left" Margin="98,112,0,0" VerticalAlignment="Top" Width="112" RenderTransformOrigin="-0.669,0.146" Click="SaveFile_Click"/>
-        <TextBox x:Name="CountWord" HorizontalAlignment="Left" Height="23" Margin="98,190,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Меньше какого количества символов удалить слова" HorizontalAlignment="Left" Margin="98,150,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="RadioPunct" Content="Удалить знаки препинания" HorizontalAlignment="Left" Margin="98,234,0,0" VerticalAlignment="Top"/>
-        <TextBlock x:Name="Answer" HorizontalAlignment="Left" Margin="266,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox x:Name="CountWord" HorizontalAlignment="Left" Height="23" Margin="19,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Меньше какого количества символов удалить слова" HorizontalAlignment="Left" Margin="19,44,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="Answer" HorizontalAlignment="Left" Margin="19,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="146" Width="408"/>
+        <CheckBox x:Name="PunctBox" Content="Удалить знаки препинания" HorizontalAlignment="Left" Margin="19,114,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="ParserButton" Content="Выбрать файл и произвести парсировку файлов" HorizontalAlignment="Left" Margin="19,10,0,0" VerticalAlignment="Top" Width="299" Click="ParserButton_Click"/>
 
     </Grid>
 </Window>
